@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade de Recuperação – 2º trimestre</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+  <h1>Atividade de Recuperação – 2º trimestre</h1>
+  <p>Programação de Clientes Web · CEFET/RJ Nova Friburgo</p>
+</header>
+
+<main>
+<h2>Arrays</h2>
+
+<section>
+  <h3>1. Ordenar 2 números (sem sort)</h3>
+  <input type="number" id="e1a" placeholder="Número 1">
+  <input type="number" id="e1b" placeholder="Número 2">
+  <button onclick="ex1()">Ordenar</button>
+  <pre id="s1"></pre>
+</section>
+
+<section>
+  <h3>2. Ordenar 3 números (função própria)</h3>
+  <input type="number" id="e2a" placeholder="Número 1">
+  <input type="number" id="e2b" placeholder="Número 2">
+  <input type="number" id="e2c" placeholder="Número 3">
+  <button onclick="ex2()">Ordenar</button>
+  <pre id="s2"></pre>
+</section>
+
+<section>
+  <h3>3. Inverter array de 3 números</h3>
+  <button onclick="ex3()">Digitar 3 números</button>
+  <pre id="s3"></pre>
+</section>
+
+<section>
+  <h3>4. Inverter array de tamanho escolhido</h3>
+  <button onclick="ex4()">Começar</button>
+  <pre id="s4"></pre>
+</section>
+
+<section>
+  <h3>5. Ordenar array de qualquer tamanho (bubble sort)</h3>
+  <input type="text" id="e5" placeholder="Ex.: 5, 3, 9, 1">
+  <button onclick="ex5()">Ordenar</button>
+  <pre id="s5"></pre>
+</section>
+
+<section>
+  <h3>6. Todos os índices de um número</h3>
+  <input type="text" id="e6l" placeholder="Vetor. Ex.: 1, 2, 3, 2, 2">
+  <input type="number" id="e6n" placeholder="Número buscado">
+  <button onclick="ex6()">Buscar</button>
+  <pre id="s6"></pre>
+</section>
+
+<section>
+  <h3>7. Fibonacci em array</h3>
+  <input type="number" id="e7" min="1" placeholder="Inteiro positivo">
+  <button onclick="ex7()">Gerar</button>
+  <pre id="s7"></pre>
+</section>
+
+<section>
+  <h3>8. Fatorial em array</h3>
+  <input type="number" id="e8" min="1" placeholder="Inteiro positivo">
+  <button onclick="ex8()">Gerar</button>
+  <pre id="s8"></pre>
+</section>
+
+<section>
+  <h3>9. Jogo da velha</h3>
+  <input type="number" id="jl" min="1" max="3" placeholder="Linha (1-3)">
+  <input type="number" id="jc" min="1" max="3" placeholder="Coluna (1-3)">
+  <button onclick="jogar()">Marcar</button>
+  <table id="tabuleiro"></table>
+  <pre id="s9"></pre>
+</section>
+
+<section>
+  <h3>10. Soma de um conjunto de números</h3>
+  <input type="text" id="e10" placeholder="Ex.: 4, 8, 15">
+  <button onclick="ex10()">Somar</button>
+  <pre id="s10"></pre>
+</section>
+
+<section>
+  <h3>11. Média de um conjunto de números</h3>
+  <input type="text" id="e11" placeholder="Ex.: 4, 8, 15">
+  <button onclick="ex11()">Calcular</button>
+  <pre id="s11"></pre>
+</section>
+
+<section>
+  <h3>12. Apenas números primos</h3>
+  <input type="text" id="e12" placeholder="Ex.: 1, 2, 3, 4, 5, 9, 11">
+  <button onclick="ex12()">Filtrar</button>
+  <pre id="s12"></pre>
+</section>
+
+<section>
+  <h3>13. Frutas em ordem alfabética decrescente</h3>
+  <pre id="s13"></pre>
+</section>
+
+<section>
+  <h3>14. Estados em ordem alfabética no select</h3>
+  <select id="estados"></select>
+</section>
+
+<section>
+  <h3>15. Agenda 5x2</h3>
+  <button onclick="ex15()">Preencher agenda</button>
+  <pre id="s15"></pre>
+</section>
+
+<h2>Exercícios DOM</h2>
+
+<section>
+  <h3>16 e 17. Quadrados vermelhos (cor aleatória ao passar o mouse)</h3>
+  <button onclick="criarQuadrado()">Criar quadrado</button>
+  <div id="quadrados"></div>
+</section>
+
+<section>
+  <h3>18 e 19. Lista de nomes</h3>
+  <ul id="lista"></ul>
+  <input type="text" name="nome">
+  <button onClick="adicionar()">Adicionar</button>
+</section>
+
+<h2>DOM e Forms</h2>
+
+<section>
+  <h3>20. Botões que mudam o plano de fundo</h3>
+  <form>
+    <button type="button" onclick="fundo('red')">Vermelho</button>
+    <button type="button" onclick="fundo('green')">Verde</button>
+    <button type="button" onclick="fundo('blue')">Azul</button>
+    <button type="button" onclick="fundo('yellow')">Amarelo</button>
+  </form>
+</section>
+
+<section>
+  <h3>21. Links com onmouseover</h3>
+  <a href="#" onclick="return false" onmouseover="fundo('red')">Vermelho</a> |
+  <a href="#" onclick="return false" onmouseover="fundo('green')">Verde</a> |
+  <a href="#" onclick="return false" onmouseover="fundo('blue')">Azul</a> |
+  <a href="#" onclick="return false" onmouseover="fundo('yellow')">Amarelo</a>
+</section>
+
+<section>
+  <h3>22. Select de cores</h3>
+  <select onchange="fundo(this.value)">
+    <option value="red">Vermelho</option>
+    <option value="green">Verde</option>
+    <option value="blue">Azul</option>
+    <option value="yellow">Amarelo</option>
+  </select>
+</section>
+
+<section>
+  <h3>23. Ocultar/Mostrar parágrafo</h3>
+  <p id="par">Este é o parágrafo que pode ser ocultado ou mostrado.</p>
+  <button onclick="alternarParagrafo()">Ocultar/Mostrar</button>
+</section>
+
+<section>
+  <h3>24. Cadastro de usuário</h3>
+  <form onsubmit="return validarCadastro()">
+    <input type="text" id="login" placeholder="Login">
+    <input type="password" id="senha" placeholder="Senha">
+    <input type="password" id="confirma" placeholder="Confirmar senha">
+    <button type="submit">Cadastrar</button>
+  </form>
+  <p id="s24" class="erro"></p>
+</section>
+
+<section>
+  <h3>25. Palíndromo</h3>
+  <input type="text" id="e25" placeholder="Digite uma palavra">
+  <button onclick="ex25()">Verificar</button>
+  <pre id="s25"></pre>
+</section>
+
+<section>
+  <h3>26. Inverter 5 nomes</h3>
+  <input type="text" class="nome5" placeholder="Nome 1">
+  <input type="text" class="nome5" placeholder="Nome 2">
+  <input type="text" class="nome5" placeholder="Nome 3">
+  <input type="text" class="nome5" placeholder="Nome 4">
+  <input type="text" class="nome5" placeholder="Nome 5">
+  <button onclick="inverterNomes()">Inverter</button>
+</section>
+
+<section>
+  <h3>27. Cadastro de cliente</h3>
+  <form class="cliente">
+    <label>Nome <input type="text" id="nomeCliente"></label>
+    <fieldset>
+      <legend>Pessoa</legend>
+      <label><input type="radio" name="pessoa" id="pf" onchange="alternarPessoa()"> Física</label>
+      <label><input type="radio" name="pessoa" id="pj" onchange="alternarPessoa()"> Jurídica</label>
+    </fieldset>
+    <label>CPF <input type="text" id="cpf" disabled></label>
+    <label>CNPJ <input type="text" id="cnpj" disabled></label>
+    <label>Data de nascimento <input type="text" id="nasc" class="so-numeros" maxlength="8" placeholder="DDMMAAAA" disabled></label>
+    <label>Endereço <input type="text" id="endereco"></label>
+    <label>CEP <input type="text" id="cep" class="so-numeros" maxlength="8"></label>
+    <label>Telefone <input type="text" id="telefone"></label>
+    <label>E-mail <input type="email" id="email"></label>
+  </form>
+</section>
+
+<section>
+  <h3>28. Palavras intercaladas</h3>
+  <input type="text" id="p1" placeholder="Palavra 1">
+  <input type="text" id="p2" placeholder="Palavra 2">
+  <button onclick="ex28()">Intercalar</button>
+  <input type="text" id="s28" disabled placeholder="Resultado">
+</section>
+
+<section>
+  <h3>29. Três números: tabela de resultados</h3>
+  <input type="number" id="t1" placeholder="Número 1">
+  <input type="number" id="t2" placeholder="Número 2">
+  <input type="number" id="t3" placeholder="Número 3">
+  <button onclick="ex29()">Calcular</button>
+  <div id="s29"></div>
+</section>
+
+<section>
+  <h3>30. Pesquisar palavra no texto</h3>
+  <form onsubmit="pesquisar(); return false;">
+    <input type="text" id="busca" placeholder="Palavra">
+    <button type="submit">Pesquisar</button>
+  </form>
+  <p id="s30"></p>
+  <p id="texto">JavaScript é uma linguagem de programação muito usada na web. Com JavaScript é possível manipular o DOM, tratar eventos e validar formulários. Quem aprende JavaScript consegue criar páginas dinâmicas e interativas.</p>
+</section>
+
+<section>
+  <h3>31. Galeria de imagens (M x N)</h3>
+  <div id="galeria"></div>
+  <div id="ampliada"><p>Clique em uma miniatura para ampliar.</p></div>
+</section>
+</main>
+</body>
+</html>

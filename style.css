@@ -1,0 +1,78 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+  margin: 0;
+  padding-bottom: 40px;
+  transition: background-color 0.3s;
+}
+
+header {
+  background: #5f1f4f;
+  color: #f0a3e6;
+  text-align: center;
+  padding: 20px 10px;
+}
+header h1 { margin: 0 0 6px; font-size: 1.5rem; }
+header p { margin: 0; opacity: 0.85; }
+
+main { max-width: 900px; margin: 0 auto; padding: 0 16px; }
+h2 { border-bottom: 3px solid #be376b; padding-bottom: 4px; margin-top: 36px; }
+
+section {
+  background: #fff;
+  border: 1px solid #d5dbe1;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin: 14px 0;
+}
+section h3 { margin: 0 0 10px; font-size: 1.05rem; color: #90a1b9; }
+
+input, select, button { font-size: 0.95rem; padding: 6px 10px; margin: 3px 2px; }
+button { cursor: pointer; background: #5f1f1f; color: #fff; border: 0; border-radius: 4px; }
+button:hover { background: #2d5185; }
+input:disabled { background: #e6e9ec; cursor: not-allowed; }
+
+pre { background: #f0f3f6; padding: 8px; border-radius: 4px; white-space: pre-wrap; min-height: 1.2em; margin: 8px 0 0; }
+.erro { color: #b00020; }
+[hidden] { display: none !important; }
+
+/* Jogo da velha */
+#tabuleiro { border-collapse: collapse; margin-top: 10px; }
+#tabuleiro td {
+  width: 60px; height: 60px;
+  border: 2px solid #1f3a5f;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Quadrados */
+#quadrados { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.quadrado { width: 100px; height: 100px; background: red; }
+
+/* Lista de nomes */
+#lista { margin-top: 0; }
+
+/* Formulário de cliente */
+.cliente label { display: block; margin: 6px 0; }
+.cliente input[type="text"], .cliente input[type="email"] { width: 100%; max-width: 360px; display: block; }
+.cliente fieldset { border: 1px solid #d5dbe1; margin: 8px 0; }
+.cliente fieldset label { display: inline; margin-right: 12px; }
+
+/* Tabela de resultados */
+#s29 table { border-collapse: collapse; margin-top: 10px; }
+#s29 th, #s29 td { border: 1px solid #aab4be; padding: 6px 14px; text-align: left; }
+#s29 th { background: #e3e9ef; }
+
+/* Busca */
+mark { background: yellow; }
+
+/* Galeria */
+#galeria { display: grid; gap: 8px; }
+#galeria img { width: 100%; height: 90px; object-fit: cover; cursor: pointer; border: 2px solid transparent; border-radius: 4px; }
+#galeria img:hover { border-color: #5f1f3a; }
+#ampliada { margin-top: 12px; text-align: center; min-height: 60px; border: 1px dashed #aab4be; border-radius: 6px; padding: 8px; }
+#ampliada img { max-width: 100%; border-radius: 4px; }
